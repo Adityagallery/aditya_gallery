@@ -1,5 +1,5 @@
 # aditya_gallery
-A static image gallery website named Aditya Gallery – inspired by GeekyGallery.in – showcasing posters across categories like Anime, Movies, Sports, and Motivation. No pricing or ordering, just a clean gallery to view.
+A static image gallery website named Aditya Gallery – inspired by GeekyGallery.in – showcasing posters across categories like Anime, Movies, Sports, and Motivation. No pricing or ordering, just a clean gallery to 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +59,6 @@ A static image gallery website named Aditya Gallery – inspired by GeekyGallery
       padding: 1rem;
       margin-top: 2rem;
     }
-    /* Lightbox */
     #lightbox {
       position: fixed;
       top: 0; left: 0;
@@ -80,9 +79,7 @@ A static image gallery website named Aditya Gallery – inspired by GeekyGallery
   <header>Aditya Gallery</header>
   <nav>
     <a href="#anime">Anime</a>
-    <a href="#movies">Movies</a>
     <a href="#sports">Sports</a>
-    <a href="#motivation">Motivation</a>
   </nav>
 
   <div id="lightbox" onclick="this.style.display='none'">
@@ -92,36 +89,19 @@ A static image gallery website named Aditya Gallery – inspired by GeekyGallery
   <section id="anime">
     <h2 class="section-title">Anime Posters</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x400?text=Anime+1" alt="Anime 1" onclick="openLightbox(this.src)">
-      <img src="https://via.placeholder.com/300x400?text=Anime+2" alt="Anime 2" onclick="openLightbox(this.src)">
-      <img src="https://via.placeholder.com/300x400?text=Anime+3" alt="Anime 3" onclick="openLightbox(this.src)">
-    </div>
-  </section>
-
-  <section id="movies">
-    <h2 class="section-title">Movie Posters</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/300x400?text=Movie+1" alt="Movie 1" onclick="openLightbox(this.src)">
-      <img src="https://via.placeholder.com/300x400?text=Movie+2" alt="Movie 2" onclick="openLightbox(this.src)">
-      <img src="https://via.placeholder.com/300x400?text=Movie+3" alt="Movie 3" onclick="openLightbox(this.src)">
+      <!-- Replace with your own links if needed -->
+      ${[...Array(20)].map((_, i) => `
+        <img src="https://via.placeholder.com/300x400?text=Anime+${i + 1}" alt="Anime ${i + 1}" onclick="openLightbox(this.src)">
+      `).join('')}
     </div>
   </section>
 
   <section id="sports">
     <h2 class="section-title">Sports Posters</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x400?text=Sports+1" alt="Sports 1" onclick="openLightbox(this.src)">
-      <img src="https://via.placeholder.com/300x400?text=Sports+2" alt="Sports 2" onclick="openLightbox(this.src)">
-      <img src="https://via.placeholder.com/300x400?text=Sports+3" alt="Sports 3" onclick="openLightbox(this.src)">
-    </div>
-  </section>
-
-  <section id="motivation">
-    <h2 class="section-title">Motivational Posters</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/300x400?text=Motivation+1" alt="Motivation 1" onclick="openLightbox(this.src)">
-      <img src="https://via.placeholder.com/300x400?text=Motivation+2" alt="Motivation 2" onclick="openLightbox(this.src)">
-      <img src="https://via.placeholder.com/300x400?text=Motivation+3" alt="Motivation 3" onclick="openLightbox(this.src)">
+      ${[...Array(20)].map((_, i) => `
+        <img src="https://via.placeholder.com/300x400?text=Sports+${i + 1}" alt="Sports ${i + 1}" onclick="openLightbox(this.src)">
+      `).join('')}
     </div>
   </section>
 
